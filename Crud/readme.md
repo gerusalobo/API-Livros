@@ -1,0 +1,4 @@
+ "dependencies":
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.4.5"
