@@ -1,0 +1,20 @@
+{
+  "name": "crud_api",
+  "version": "1.0.0",
+  "descriptor": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "kywords": "",
+  "author": "GL",
+  "License": "ISC",
+  "dependencies": {
+    "basic-auth": "^2.0.1",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1"
+  }
+}
