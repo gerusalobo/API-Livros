@@ -2,10 +2,10 @@ const express = require('express');
 const mongoose = require('mongoose');
 const swaggerJsdoc = require('swagger-jsdoc'); //swagger
 const swaggerUi = require('swagger-ui-express'); //swagger
-const auth = require('./auth'); // Middleware de autenticação
-const basicAuth = require('./auth'); // Middleware de autenticação
-const Livro = require('./models/livro'); //model livro
-const User = require('./models/user'); //model user
+const auth = require('../auth'); // Middleware de autenticação
+const basicAuth = require('../auth'); // Middleware de autenticação
+const Livro = require('../models/livro'); //model livro
+const User = require('../models/user'); //model user
 const bodyParser = require('body-parser');
 const { ObjectId } = mongoose.Types;
 
