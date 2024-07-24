@@ -22,6 +22,11 @@ const validateAndSanitize = require('../middlewares/validateAndSanitize');
  *           type: string
  *         description: Nome da editora
  *       - in: query
+ *         name: genero
+ *         schema:
+ *           type: string
+ *         description: Genero do Livro
+ *       - in: query
  *         name: nome
  *         schema:
  *           type: string

@@ -1,3 +1,4 @@
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const express = require('express');
 const mongoose = require('mongoose');
 const swaggerJsdoc = require('swagger-jsdoc');
@@ -8,6 +9,8 @@ const bodyParser = require('body-parser');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+//conexão mongo local
 const MONGODB_URI = 'mongodb://localhost:27017/books';
 
 mongoose.connect(MONGODB_URI, {
@@ -20,6 +23,25 @@ db.on('error', console.error.bind(console, 'Erro de conexão com o Mongo:'));
 db.once('open', () => {
   console.log('Conectado ao Mongo');
 });
+
+/*
+//conexão mongo Atlas
+const MONGODB_URI = 'mongodb+srv://gerusalobo:CerKmY3h2Jlzojxq@gwolf.wl7fm8d.mongodb.net/?retryWrites=true&w=majority&appName=GWOLF';
+
+async function connectToDatabase() {
+    try {
+      await mongoose.connect(MONGODB_URI, {
+        useNewUrlParser: true,
+        useUnifiedTopology: true,
+      });
+      console.log("Connected to MongoDB Atlas");
+    } catch (error) {
+      console.error("Could not connect to MongoDB Atlas", error);
+    }
+  }
+  
+connectToDatabase();
+*/
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());

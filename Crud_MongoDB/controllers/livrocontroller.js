@@ -7,11 +7,12 @@ const express = require('express');
 
 //Lista de Livros
 exports.getLivros = async (req, res) => {
-  const { autor, editora, nome, minPaginas, start_at, limit } = req.query;
+  const { autor, editora, genero, nome, minPaginas, start_at, limit } = req.query;
   const filters = {};
 
   if (autor) filters.autor = new RegExp(autor, 'i');
   if (editora) filters.editora = new RegExp(editora, 'i');
+  if (genero) filters.genero = new RegExp(genero, 'i');
   if (nome) filters.nome = new RegExp(nome, 'i');
   if (minPaginas) filters.paginas = { $gte: parseInt(minPaginas, 10) };
 
