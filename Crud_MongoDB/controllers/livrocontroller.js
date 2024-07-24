@@ -1,6 +1,11 @@
 const Livro = require('../models/livro');
+const validator = require('validator');
 const { ObjectId } = require('mongoose').Types;
+const express = require('express');
 
+//Endpoints
+
+//Lista de Livros
 exports.getLivros = async (req, res) => {
   const { autor, editora, nome, minPaginas, start_at, limit } = req.query;
   const filters = {};
@@ -21,6 +26,7 @@ exports.getLivros = async (req, res) => {
   }
 };
 
+//Get Livro by ID
 exports.getLivroById = async (req, res) => {
   try {
     const { id } = req.params;
@@ -37,36 +43,41 @@ exports.getLivroById = async (req, res) => {
   }
 };
 
+//Criar livro
 exports.createLivro = async (req, res) => {
-  try {
-    const livro = new Livro(req.body);
-    await livro.save();
-    res.status(201).json(livro);
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-};
+    try {
+      const livro = new Livro(req.body);
+      await livro.save();
+      res.status(201).json(livro);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
+  };
 
+//Atualizar Livro  
 exports.updateLivro = async (req, res) => {
-  try {
-    const livro = await Livro.findByIdAndUpdate(new ObjectId(req.params.id), req.body, { new: true, runValidators: true });
-    if (!livro) {
-      return res.status(404).send('Livro não encontrado');
+    try {
+      const livro = await Livro.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
+      if (!livro) {
+        return res.status(404).json({ message: 'Livro não encontrado' });
+      }
+      res.json(livro);
+    } catch (err) {
+      res.status(500).json({ message: err.message });
     }
-    res.json(livro);
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
-};
+  };
 
+//Deletar Livro
 exports.deleteLivro = async (req, res) => {
-  try {
-    const livro = await Livro.findByIdAndDelete(new ObjectId(req.params.id));
-    if (!livro) {
-      return res.status(404).send('Livro não encontrado');
-    }
+    try {
+      const livro = await Livro.findByIdAndDelete(req.params.id);
+   if (livro) {
     res.send('Livro deletado');
-  } catch (err) {
-    res.status(500).send(err.message);
-  }
+   } else {
+    res.status(404).send('Livro não encontrado');
+   }
+ } catch (err) {
+  res.status(500).send(err.message);
+ }
+ 
 };

@@ -2,7 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
-const basicAuth = require('./auth'); // Middleware de autenticação
+const basicAuth = require('./middlewares/auth'); // Middleware de autenticação
 const livroRoutes = require('./routes/livroRoutes'); // Rotas de livros
 const bodyParser = require('body-parser');
 

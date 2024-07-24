@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const livroController = require('../controllers/livrocontroller');
+const validateAndSanitize = require('../middlewares/validateAndSanitize');
 
 /**
  * @swagger
@@ -105,7 +106,7 @@ router.get('/:id', livroController.getLivroById);
  *       500:
  *         description: Erro no servidor
  */
-router.post('/', livroController.createLivro);
+router.post('/',validateAndSanitize, livroController.createLivro);
 
 /**
  * @swagger
@@ -135,7 +136,7 @@ router.post('/', livroController.createLivro);
  *       500:
  *         description: Erro no servidor
  */
-router.put('/:id', livroController.updateLivro);
+router.put('/:id', validateAndSanitize, livroController.updateLivro);
 
 /**
  * @swagger
