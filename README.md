@@ -34,7 +34,7 @@ Url da API: http://sol.librian.info:3000/livros/
 
     - Hearders:
        - Accept: application/json
-         - Content-Type: application/json
+       - Content-Type: application/json
 
 
 
