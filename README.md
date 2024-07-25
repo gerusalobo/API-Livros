@@ -30,8 +30,7 @@ Url da API: http://sol.librian.info:3000/livros/
 
    Para acesso via Postman ou curl, usar:
 
-   	- Autenticação: Basic
-
+    - Autenticação: Basic
     - Hearders:
        - Accept: application/json
        - Content-Type: application/json
