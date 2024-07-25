@@ -55,6 +55,10 @@ A API utiliza autenticação básica através do middleware `auth.js`. Para aces
 
 
 
+Maiores detalhes: [Readme.md](./Crud_MongoDB/readme.md)
+
+
+
 ## Endpoints:
 
 ### GET /livros
