@@ -61,7 +61,7 @@ A API utiliza autenticação básica através do middleware `auth.js`. Para aces
 
 ### GET /livros
 
-![Captura de tela 2024-07-25 115722](./img/Captura de tela 2024-07-25 115722.png)
+![](./img/Captura de tela 2024-07-25 115722.png)
 
 Esse endpoint obtém a lista de livros de forma paginada usando start_at e limit.
 
