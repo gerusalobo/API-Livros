@@ -109,9 +109,9 @@ Usando um json no body com os parâmetros: nome, autor, gênero, páginas e edit
 
 Esse endpoint pega os dados de um livro, pelo Id do livro.
 
+![](./img/Capturadetela2024-07-25120534.png)
 
 
-![](./img/Capturadetela 2024-07-25120534.png)
 
 Esse endpoint trás os dados detalhados do livro, enviando o parâmetro do Id.
 
