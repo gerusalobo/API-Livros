@@ -157,6 +157,12 @@ Esse endpoint permite que um livro seja deletado.
 
    O arquivo `bookslist.csv`, tem a base de dados de livros importada no MongoDB para teste.
 
+   Para o projeto foi usado o banco books e as collections: users e bookslist.
+
+   ![](./img/Capturadetela2024-07-25131306.png)
+
+   
+
 3. **Executar o servidor**:
 
    ```
