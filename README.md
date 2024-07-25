@@ -173,7 +173,7 @@ Esse endpoint permite que um livro seja deletado.
 
 4. **Acessar a documentação da API**:
 
-   A documentação da API gerada pelo Swagger está disponível em `http://localhost:3000/api-docs`.
+   A documentação da API gerada pelo Swagger estará disponível em `http://localhost:3000/api-docs`.
 
 
 
