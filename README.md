@@ -173,8 +173,13 @@ Esse endpoint permite que um livro seja deletado.
 
 ## Ambientes Utilizados no Desenvolvimento
 
-- O ambiente de desenvolvimento foi realizado em máquina windows com MongoDB local.
-- O ambiente de produção é um servidor linux Mint local com o MongoDB no Atlas, e ativado via serviço.
+- O ambiente de desenvolvimento foi realizado o  VSCode em máquina Windows 11 com MongoDB local.
+
+  
+
+- O ambiente de produção é um servidor linux Mint local conectado ao MongoDB no Atlas, e a aplicação ativada como serviço.
+
+
 
 
 
