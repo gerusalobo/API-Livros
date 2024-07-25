@@ -30,13 +30,11 @@ Url da API: http://sol.librian.info:3000/livros/
 
    Para acesso via Postman ou curl, usar:
 
-​	Autenticação: Basic
+   	- Autenticação: Basic
 
-​	Hearders:
-
-​		Accept: application/json
-
-​		Content-Type: application/json
+    - Hearders:
+       - Accept: application/json
+         - Content-Type: application/json
 
 
 
@@ -154,6 +152,12 @@ Esse endpoint permite que um livro seja deletado.
 2. **Configurar o MongoDB**:
 
    No arquivo `app.js`, configure a conexão com o MongoDB Atlas ou outro servidor MongoDB de sua preferência.
+
+   - No código `app.js`  a conexão com banco local está comentada.
+
+   - Para a conexão com o banco no Atlas, ajustar a MONGODB_URI no arquivo .env.
+
+   
 
    O arquivo `bookslist.csv`, tem a base de dados de livros importada no MongoDB para teste.
 
