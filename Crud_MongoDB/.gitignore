@@ -40,7 +40,7 @@ build/Release
 
 # Dependency directories
 node_modules/
-.old/
+old/
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
