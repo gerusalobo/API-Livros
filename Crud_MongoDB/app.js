@@ -27,7 +27,6 @@ db.once('open', () => {
 */
 
 //conexão mongo Atlas
-//const MONGODB_URI = 'mongodb+srv://gerusalobo:CerKmY3h2Jlzojxq@gwolf.wl7fm8d.mongodb.net/books?retryWrites=true&w=majority&appName=GWOLF';
 const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {
