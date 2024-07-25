@@ -61,7 +61,7 @@ A API utiliza autenticação básica através do middleware `auth.js`. Para aces
 
 ### GET /livros
 
-![](./img/Captura de tela 2024-07-25 115722.png)
+![](./img/Capturadetela2024-07-25115722.png)
 
 Esse endpoint obtém a lista de livros de forma paginada usando start_at e limit.
 
@@ -89,7 +89,7 @@ GET http://localhost:3000/livros?editora=Wileys&minPaginas=200
 
 Esse endpoint permite a criação de um livro:
 
-![](./img/Captura de tela 2024-07-25 120721.png)
+![](./img/Capturadetela2024-07-25120721.png)
 
 Usando um json no body com os parâmetros: nome, autor, gênero, páginas e editora.
 
@@ -111,7 +111,7 @@ Esse endpoint pega os dados de um livro, pelo Id do livro.
 
 
 
-![image-20240725125141937](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125141937.png)
+![](./img/Capturadetela 2024-07-25120534.png)
 
 Esse endpoint trás os dados detalhados do livro, enviando o parâmetro do Id.
 
@@ -119,7 +119,7 @@ Esse endpoint trás os dados detalhados do livro, enviando o parâmetro do Id.
 
 Esse endpoint permite a alteração do livro, usando o _Id de parâmetro para indicar o livro, e o os dados alterados no body.
 
-![image-20240725125211411](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125211411.png)
+![](./img/Capturadetela2024-07-25121418.png)
 
 
 
@@ -137,7 +137,7 @@ Usando um json no body com a propriedade a ser alterada:
 
 Esse endpoint permite que um livro seja deletado.
 
-![image-20240725125238466](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125238466.png)
+![](./img/Capturadetela2024-07-25121811.png)
 
 
 
