@@ -54,7 +54,11 @@ A API utiliza autenticação básica através do middleware `auth.js`. Para aces
 
 
 
-Maiores detalhes: [Readme.md](./Crud_MongoDB/readme.md)
+Observação: As variáveis de ambiente como a URL para conexão com o banco foram registradas em um arquivo oculto .env.
+
+
+
+Maiores detalhes sobre o projeto no [Readme.md](./Crud_MongoDB/readme.md)
 
 
 
@@ -158,11 +162,13 @@ Esse endpoint permite que um livro seja deletado.
 
    - No código `app.js`  a conexão com banco local está comentada.
 
-   - Para a conexão com o banco no Atlas, ajustar a MONGODB_URI no arquivo .env.
+   - Para a conexão com o banco no Atlas, criar o arquivo .env e inserir: MONGODB_URI ="url_de_conexão_do_Atlas"
 
    
 
    O arquivo `bookslist.csv`, tem a base de dados de livros importada no MongoDB para teste.
+
+   
 
    Para o projeto foi usado o banco books e as collections: users e bookslist.
 
