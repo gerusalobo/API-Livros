@@ -109,17 +109,17 @@ Usando um json no body com os parâmetros: nome, autor, gênero, páginas e edit
 
 Esse endpoint pega os dados de um livro, pelo Id do livro.
 
-![](./img/Captura de tela 2024-07-25 120534.png)
+
+
+![image-20240725125141937](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125141937.png)
 
 Esse endpoint trás os dados detalhados do livro, enviando o parâmetro do Id.
-
-
 
 ### PUT /livros/:id
 
 Esse endpoint permite a alteração do livro, usando o _Id de parâmetro para indicar o livro, e o os dados alterados no body.
 
-![](./img/Captura de tela 2024-07-25 121418.png)
+![image-20240725125211411](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125211411.png)
 
 
 
@@ -137,7 +137,7 @@ Usando um json no body com a propriedade a ser alterada:
 
 Esse endpoint permite que um livro seja deletado.
 
-![](./img/Captura de tela 2024-07-25 121811.png)
+![image-20240725125238466](./../../../../AppData/Roaming/Typora/typora-user-images/image-20240725125238466.png)
 
 
 
