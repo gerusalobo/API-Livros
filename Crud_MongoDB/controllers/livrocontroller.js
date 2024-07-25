@@ -56,7 +56,7 @@ exports.createLivro = async (req, res) => {
   };
 
 //Atualizar Livro  
-exports.updateLivro = async (req, res) => {
+  /*exports.updateLivro = async (req, res) => {
     try {
       const livro = await Livro.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true });
       if (!livro) {
@@ -66,7 +66,32 @@ exports.updateLivro = async (req, res) => {
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
-  };
+  };*/
+  exports.updateLivro = async (req, res) => {
+    try {
+        const livroId = req.params.id;
+        const updates = req.body;
+    
+        // Remover campos vazios do objeto updates
+        Object.keys(updates).forEach((key) => {
+          if (updates[key] === "" || updates[key] === null || updates[key] === undefined) {
+            delete updates[key];
+          }
+        });
+    
+        // Atualizar apenas os campos que não foram removidos
+        const livroAtualizado = await Livro.findByIdAndUpdate(livroId, { $set: updates }, { new: true, runValidators: true });
+    
+        if (!livroAtualizado) {
+          return res.status(404).json({ message: 'Livro não encontrado' });
+        }
+    
+        res.json(livroAtualizado);
+      } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: 'Erro ao atualizar livro' });
+      }
+    };
 
 //Deletar Livro
 exports.deleteLivro = async (req, res) => {

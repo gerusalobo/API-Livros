@@ -19,7 +19,7 @@ const livroSchema = new mongoose.Schema({
   },
   editora: {
     type: String,
-    required: true,
+    required: false,
   }
 },{ collection: 'bookslist' });
 
