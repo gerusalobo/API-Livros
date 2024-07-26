@@ -1,14 +1,22 @@
 require('dotenv').config();
 const express = require('express');
+const https = require('https');
 const mongoose = require('mongoose');
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 const basicAuth = require('./middlewares/auth'); // Middleware de autenticação
 const livroRoutes = require('./routes/livroRoutes'); // Rotas de livros
 const bodyParser = require('body-parser');
+const fs = require('fs');
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+const HTTPSPORT = process.env.HTTPSPORT || 3443;
+
+var httpsoptions = {
+  key: fs.readFileSync(process.env.API_KEY || './cert/private.key'),
+  cert: fs.readFileSync(process.env.API_CRT || './cert/public.crt')
+};
 
 /*
 //conexão mongo local
@@ -29,10 +37,7 @@ db.once('open', () => {
 //conexão mongo Atlas
 const MONGODB_URI = process.env.MONGODB_URI;
 
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
+mongoose.connect(MONGODB_URI, {});
 
 const db = mongoose.connection;
 db.on('error', console.error.bind(console, 'Erro de conexão com o Mongo:'));
@@ -102,6 +107,11 @@ app.use(basicAuth);
 app.use('/livros', livroRoutes);
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+  console.log(`Servidor HTTP escutando na porta ${PORT}`);
   console.log(`Swagger UI disponível em http://localhost:${PORT}/api-docs`);
+});
+
+https.createServer(httpsoptions, app).listen(HTTPSPORT, () => {
+  console.log(`Servidor HTTPS escutando na porta ${HTTPSPORT}`);
+  console.log(`Swagger UI disponível em https://localhost:${HTTPSPORT}/api-docs`);
 });
