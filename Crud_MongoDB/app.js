@@ -13,14 +13,10 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HTTPSPORT = process.env.HTTPSPORT || 3443;
 
-
-
-
 var httpsoptions = {
   key: fs.readFileSync(process.env.API_KEY || './cert/private.key'),
   cert: fs.readFileSync(process.env.API_CRT || './cert/public.crt')
 };
-
 
 /*
 //conexão mongo local
