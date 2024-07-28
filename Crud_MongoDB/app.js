@@ -13,28 +13,14 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const HTTPSPORT = process.env.HTTPSPORT || 3443;
 
+//configuração certificados para acesso https
 var httpsoptions = {
   key: fs.readFileSync(process.env.API_KEY || './cert/private.key'),
   cert: fs.readFileSync(process.env.API_CRT || './cert/public.crt')
 };
 
-/*
-//conexão mongo local
-const MONGODB_URI = 'mongodb://localhost:27017/books';
-
-mongoose.connect(MONGODB_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true
-});
-
-const db = mongoose.connection;
-db.on('error', console.error.bind(console, 'Erro de conexão com o Mongo:'));
-db.once('open', () => {
-  console.log('Conectado ao Mongo');
-});
-*/
-
-//conexão mongo Atlas
+//conexão com MongoDB
+//MONGODB_URI deve ser definido no arquivo .env 
 const MONGODB_URI = process.env.MONGODB_URI;
 
 mongoose.connect(MONGODB_URI, {});
@@ -106,12 +92,15 @@ app.use(basicAuth);
 // Rotas
 app.use('/livros', livroRoutes);
 
+//servidor e urls para acesso http
 app.listen(PORT, () => {
   console.log(`Servidor HTTP escutando na porta ${PORT}`);
   console.log(`Swagger UI disponível em http://localhost:${PORT}/api-docs`);
 });
 
+//servidor e urls para acesso https
 https.createServer(httpsoptions, app).listen(HTTPSPORT, () => {
   console.log(`Servidor HTTPS escutando na porta ${HTTPSPORT}`);
   console.log(`Swagger UI disponível em https://localhost:${HTTPSPORT}/api-docs`);
 });
+
