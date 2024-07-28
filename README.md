@@ -21,6 +21,12 @@ http://sol.librian.info:3443/livros/
 
 ![](./img/image-20240724201439831.png)
 
+Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que criamos, é de teste e não pública.
+
+A pasta de certificados foi colocada no gitignore, assim como o arquivo .env.
+
+
+
 ## Conexão
 
 1. **Acesso via Swagger**:
