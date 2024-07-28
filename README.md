@@ -21,9 +21,7 @@ http://sol.librian.info:3443/livros/
 
 ![](./img/image-20240724201439831.png)
 
-Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que criamos, é de teste e não pública.
-
-A pasta de certificados foi colocada no gitignore, assim como o arquivo .env.
+Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que foi criado, é de teste e não pública.
 
 
 
@@ -68,6 +66,8 @@ A API utiliza autenticação básica através do middleware `auth.js`. Para aces
 
 
 Observação: As variáveis de ambiente como a URL para conexão com o banco foram registradas em um arquivo oculto .env.
+
+A pasta de certificados foi colocada no gitignore, assim como o arquivo .env.
 
 
 
@@ -199,9 +199,13 @@ Esse endpoint permite que um livro seja deletado.
 
 4. **Acessar a documentação da API**:
 
-   A documentação da API gerada pelo Swagger estará disponível em `http://localhost:3000/api-docs`.
+   A documentação da API gerada pelo Swagger estará disponível em `http://localhost:3000/api-docs` 
+   
+   
+   
+   Observação: Para ter as urls em https, é necessário incluir uma pasta cert dentro da pasta de Crud_MongoDB com os dados dos certificados.
 
-
+![image-20240728193008278](./img/image-20240728193008278.png)
 
 ## Ambientes Utilizados no Desenvolvimento
 
