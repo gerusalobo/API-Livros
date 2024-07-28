@@ -11,11 +11,13 @@ Documentação via Swagger, Autenticação Basic e Padrão MVC.
 A API está ativa como um serviço em um servidor linux Mint local com o MongoDB no Atlas.
 
 Url de Acesso à Documentação: 
+
 http://sol.librian.info:3000/api-docs/
 
 https://sol.librian.info:3443/api-docs/
 
 Url da API: 
+
 http://sol.librian.info:3000/livros/
 
 http://sol.librian.info:3443/livros/
