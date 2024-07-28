@@ -178,9 +178,8 @@ Esse endpoint permite que um livro seja deletado.
 
    No arquivo `app.js`, configure a conexão com o MongoDB Atlas ou outro servidor MongoDB de sua preferência.
 
-   - No código `app.js`  a conexão com banco local está comentada.
+   - Para a conexão com o banco, criar o arquivo .env e inserir: MONGODB_URI ="url_de_conexão_com_o_banco"
 
-   - Para a conexão com o banco no Atlas, criar o arquivo .env e inserir: MONGODB_URI ="url_de_conexão_do_Atlas"
 
    
 
