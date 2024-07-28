@@ -10,10 +10,13 @@ Documentação via Swagger, Autenticação Basic e Padrão MVC.
 
 A API está ativa como um serviço em um servidor linux Mint local com o MongoDB no Atlas.
 
-Url de Acesso à Documentação: http://sol.librian.info:3000/api-docs/
+Url de Acesso à Documentação: 
+http://sol.librian.info:3000/api-docs/
+https://sol.librian.info:3443/api-docs/
 
-Url da API: http://sol.librian.info:3000/livros/
-
+Url da API: 
+http://sol.librian.info:3000/livros/
+http://sol.librian.info:3443/livros/
 
 
 ![](./img/image-20240724201439831.png)
@@ -23,8 +26,8 @@ Url da API: http://sol.librian.info:3000/livros/
 1. **Acesso via Swagger**:
 
     http://sol.librian.info:3000/api-docs/
+    https://sol.librian.info:3443/api-docs/
 
-   
 
 2. **Acesso via Postman ou Curl**:
 
@@ -34,6 +37,10 @@ Url da API: http://sol.librian.info:3000/livros/
     - Hearders:
        - Accept: application/json
        - Content-Type: application/json
+
+
+
+![](./img/Capturadetela2024-07-26112450.png)
 
 
 
