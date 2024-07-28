@@ -200,12 +200,32 @@ Esse endpoint permite que um livro seja deletado.
 4. **Acessar a documentação da API**:
 
    A documentação da API gerada pelo Swagger estará disponível em `http://localhost:3000/api-docs` 
+
    
-   
-   
-   Observação: Para ter as urls em https, é necessário incluir uma pasta cert dentro da pasta de Crud_MongoDB com os dados dos certificados.
+
+5. **Acesso via https**:
+
+   Para ter as urls em https da documentação e do servidor, é necessário incluir uma pasta cert dentro da pasta de Crud_MongoDB com os dados dos certificados.
 
 ![image-20240728193008278](./img/image-20240728193008278.png)
+
+Caso você não tenha como gerar um certificado, favor comentar os trechos de códigos abaixo, no arquivo app.js:
+
+```
+https.createServer(httpsoptions, app).listen(HTTPSPORT, () => {
+  console.log(`Servidor HTTPS escutando na porta ${HTTPSPORT}`);
+  console.log(`Swagger UI disponível em https://localhost:${HTTPSPORT}/api-docs`);
+});
+```
+
+```
+var httpsoptions = {
+  key: fs.readFileSync(process.env.API_KEY || './cert/private.key'),
+  cert: fs.readFileSync(process.env.API_CRT || './cert/public.crt')
+};
+```
+
+
 
 ## Ambientes Utilizados no Desenvolvimento
 
