@@ -34,6 +34,7 @@ Observação: é preciso aceitar a conexão em https, porque a entidade certific
 1. **Acesso via Swagger**:
 
     http://sol.librian.info:3000/api-docs/
+    
     https://sol.librian.info:3443/api-docs/
 
 
