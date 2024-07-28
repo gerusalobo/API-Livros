@@ -90,7 +90,7 @@ Esse endpoint obtém a lista de livros de forma paginada usando start_at e limit
 
 Por padrão o start_at é 0 e o limit é 1000.
 
-GET http://localhost:3000/livros/
+GET http://sol.librian.info:3000/livros/
 
 Com esse comando temos os primeiros 1000 livros.
 
@@ -104,7 +104,7 @@ Parâmetros: autor, editora, genero, nome, minPaginas
 
 Para incluir o filtro, incluir um ? após o livros e incluir os filtros com & entre as condições (and)
 
-GET http://localhost:3000/livros?editora=Wileys&minPaginas=200
+GET http://sol.librian.info:3000/livros?editora=Wileys&minPaginas=200
 
 
 
@@ -204,6 +204,8 @@ Esse endpoint permite que um livro seja deletado.
 4. **Acessar a documentação da API**:
 
    A documentação da API gerada pelo Swagger estará disponível em `http://localhost:3000/api-docs` 
+
+   O Servidor HTTP da API estará em `http://localhost:3000/livros/` 
 
    
 
