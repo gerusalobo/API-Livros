@@ -27,6 +27,8 @@ http://sol.librian.info:3443/livros/
 
 Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que foi criado, é de teste e não pública.
 
+Segue vídeo de Apresentação da Solução: https://youtu.be/t7_Sjzp4BY0
+
 
 
 ## Conexão
@@ -181,7 +183,7 @@ Esse endpoint permite que um livro seja deletado.
    - Para a conexão com o banco, criar o arquivo .env e inserir: MONGODB_URI ="url_de_conexão_com_o_banco"
 
 
-   
+
 
    O arquivo `bookslist.csv`, tem a base de dados de livros importada no MongoDB para teste.
 
