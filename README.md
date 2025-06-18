@@ -6,7 +6,6 @@ Documentação via Swagger, Autenticação Basic e Padrão MVC.
 
 ![](./img/image-20240724201439831.png)
 
-Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que foi criado, é de teste e não pública.
 
 Segue vídeo de Apresentação da Solução: https://youtu.be/t7_Sjzp4BY0
 
