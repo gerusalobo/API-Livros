@@ -4,25 +4,6 @@ Este projeto é uma API RESTful para gerenciar um catálogo de livros, usando No
 
 Documentação via Swagger, Autenticação Basic e Padrão MVC.
 
-
-
-## URL's de Acesso
-
-A API está ativa como um serviço em um servidor linux Mint local com o MongoDB no Atlas.
-
-Url de Acesso à Documentação: 
-
-http://sol.librian.info:3000/api-docs/
-
-https://sol.librian.info:3443/api-docs/
-
-Url da API: 
-
-http://sol.librian.info:3000/livros/
-
-http://sol.librian.info:3443/livros/
-
-
 ![](./img/image-20240724201439831.png)
 
 Observação: é preciso aceitar a conexão em https, porque a entidade certificadora do certificado que foi criado, é de teste e não pública.
@@ -35,9 +16,9 @@ Segue vídeo de Apresentação da Solução: https://youtu.be/t7_Sjzp4BY0
 
 1. **Acesso via Swagger**:
 
-    http://sol.librian.info:3000/api-docs/
+    http://localhost:3000/api-docs/
     
-    https://sol.librian.info:3443/api-docs/
+    http:/localhost:3443/api-docs/
 
 
 2. **Acesso via Postman ou Curl**:
@@ -92,7 +73,7 @@ Esse endpoint obtém a lista de livros de forma paginada usando start_at e limit
 
 Por padrão o start_at é 0 e o limit é 1000.
 
-GET http://sol.librian.info:3000/livros/
+GET /livros/
 
 Com esse comando temos os primeiros 1000 livros.
 
@@ -106,7 +87,7 @@ Parâmetros: autor, editora, genero, nome, minPaginas
 
 Para incluir o filtro, incluir um ? após o livros e incluir os filtros com & entre as condições (and)
 
-GET http://sol.librian.info:3000/livros?editora=Wileys&minPaginas=200
+GET /livros?editora=Wileys&minPaginas=200
 
 
 
