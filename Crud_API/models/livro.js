@@ -21,7 +21,7 @@ const livroSchema = new mongoose.Schema({
     type: String,
     required: false,
   }
-},{ collection: 'bookslist' });
+},{ collection: 'booklist' });
 
 const Livro = mongoose.model('Livro', livroSchema);
 

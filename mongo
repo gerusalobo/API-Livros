@@ -1,0 +1,10 @@
+db.createCollection("books") 
+
+
+
+//inserir registro
+db.livros.insertMany(registro)
+
+//selects
+
+db.getCollection('livros').find({})
